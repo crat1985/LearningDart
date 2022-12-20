@@ -14,6 +14,7 @@ main(List<String> args) {
   String? name = stdin.readLineSync();
   stdout.writeln("Welcome $name");
 
+  //Types
   int nb = 10;
   print("nb : $nb");
 
@@ -41,6 +42,7 @@ I'm RIC217 on Github
 test''';
   print(multiline_string);
 
+  //Conversions
   int two = int.parse("2");
   assert(two == 3); //dart --enable-asserts main.dart
 
@@ -54,6 +56,7 @@ test''';
   print(const_string);
   print(const_string.runtimeType);
 
+  //Classes
   Num nb_class = Num();
   if (nb_class != null) {
     nb = nb_class.num;
@@ -71,11 +74,13 @@ test''';
   print(nb3 ??= 100);
   print(nb3);
 
+  //Ternary operator
   print(nb3 % 2 == 0 ? "100 is divisible by 2" : "100 isn't divisible by 2");
 
   // ignore: todo
   //TODO 35:03
 
+  //Conditions
   var x = 3;
 
   if (x is double) {
@@ -86,6 +91,7 @@ test''';
     print("$x is nor double, nor int !");
   }
 
+  //Switch statement
   switch (x) {
     case 3:
       print("3");
@@ -94,12 +100,15 @@ test''';
       print("Not 3");
   }
 
+  //For loop
   for (int i = 0; i < 10; i++) {
     print(i + 1);
   }
 
+  //List
   var numbers = [1, 2, 3, 4, 5];
 
+  //For in loop
   for (var i in numbers) {
     print("numbers : $i");
   }
@@ -107,6 +116,7 @@ test''';
   // ignore: todo
   //TODO 41:35
 
+  //ForEach
   numbers.forEach((nb) => print("forEach : $nb"));
   numbers.forEach(printNum);
 
@@ -114,6 +124,7 @@ test''';
 
   int i = 0;
 
+  //Do while loop
   do {
     print(i);
     i++;
@@ -127,6 +138,23 @@ test''';
   for (var test in multi_types_list){
     print(test);
   }
+
+  //More on Lists
+  List list2 = multi_types_list;
+  print(multi_types_list);
+  print(list2);
+  multi_types_list[0] = "a"; //modifie les deux !
+  print(multi_types_list);
+  print(list2);
+
+  print("*"*100);
+
+  List copied_multi_types_list = [...multi_types_list];
+  print(multi_types_list);
+  print(copied_multi_types_list);
+  multi_types_list[0] = "slt";
+  print(multi_types_list);
+  print(copied_multi_types_list);
 }
 
 class Num {
