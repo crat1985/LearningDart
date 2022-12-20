@@ -185,6 +185,9 @@ test''';
   //ForEach approfondi
   List liste2 = ["Hello","World"];
   liste2.forEach(printElement);
+  liste2.forEach((element) {
+    print("from anonymous function : $element");
+  });
 }
 
 class Num {
