@@ -207,4 +207,4 @@ int square(int num) => num * num;
 
 printElement(element) => print("Element : $element");
 
-int sum(int a, int b) => a+b;
+int sum(int a, int b) => a + b;
