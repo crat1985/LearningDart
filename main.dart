@@ -188,7 +188,9 @@ test''';
   liste2.forEach((element) {
     print("from anonymous function : $element");
   });
-  print(sum(1, 2));
+  // print(sum(1, b: 2));
+  print(sum(1));
+  print(sum(1,2));
 }
 
 class Num {
@@ -207,4 +209,6 @@ int square(int num) => num * num;
 
 printElement(element) => print("Element : $element");
 
-int sum(int a, int b) => a + b;
+// int sum(a, {b}) => a + (b ?? 0);
+// int sum(int a, {int b=0}) => a + b;
+int sum(int a, [int b=0]) => a + b;
