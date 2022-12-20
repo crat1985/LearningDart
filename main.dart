@@ -166,9 +166,25 @@ test''';
 
   //Map
   Map m = {
-    "slt": "mdr"
+    "slt": "mdr",
+    "Hello": "World"
   };
   print(m);
+  print("Hello "+m['Hello']); //Hello World
+  print(m["nothing"]); //null
+
+  Map<String,String> map_class = Map();
+  map_class["Hello"] = "World";
+  //ou
+  Map<String,String> other_way_to_do_that = {"Hello":"World","slt":"mdr"};
+  print(map_class);
+  print(other_way_to_do_that);
+
+  print(square(10));
+
+  //ForEach approfondi
+  List liste2 = ["Hello","World"];
+  liste2.forEach(printElement);
 }
 
 class Num {
@@ -178,3 +194,11 @@ class Num {
 printNum(int num){
   print(num);
 }
+
+// dynamic square(num){
+//   return num*num;
+// }
+
+int square(int num) => num * num;
+
+printElement(element) => print("Element : $element");
