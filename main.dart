@@ -1,6 +1,7 @@
 //Done automaticly
 // import 'dart:core';
 
+import 'dart:collection';
 import 'dart:io';
 
 main(List<String> args) {
@@ -155,6 +156,19 @@ test''';
   multi_types_list[0] = "slt";
   print(multi_types_list);
   print(copied_multi_types_list);
+
+  //Set
+  var set1 = {};
+  print(set1.runtimeType); //HashMap
+
+  var set2 = <String>{};
+  print(set2.runtimeType); //Set
+
+  //Map
+  Map m = {
+    "slt": "mdr"
+  };
+  print(m);
 }
 
 class Num {
