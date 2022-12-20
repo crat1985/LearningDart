@@ -212,3 +212,12 @@ printElement(element) => print("Element : $element");
 // int sum(a, {b}) => a + (b ?? 0);
 // int sum(int a, {int b=0}) => a + b;
 int sum(int a, [int b=0]) => a + b;
+
+class Person{
+  String name = "";
+  int age = 0;
+
+  showInfos(){
+    print(this.name+": "+this.age.toString()+" ans.");
+  }
+}
