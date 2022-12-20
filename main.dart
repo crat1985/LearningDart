@@ -191,6 +191,14 @@ test''';
   // print(sum(1, b: 2));
   print(sum(1));
   print(sum(1,2));
+
+  Person me = Person();
+  me.name = "RIC21000";
+  me.age = 15;
+  me.showInfos();
+
+  Person me2 = Person("RIC217",15);
+  me2.showInfos();
 }
 
 class Num {
@@ -216,6 +224,11 @@ int sum(int a, [int b=0]) => a + b;
 class Person{
   String name = "";
   int age = 0;
+
+  Person([String name = "", int age = 0]){
+    this.name = name;
+    this.age = age;
+  }
 
   showInfos(){
     print(this.name+": "+this.age.toString()+" ans.");
